@@ -3,3 +3,20 @@
 # Welcome to your first Bash Script
 
 echo 'Hello World!'
+
+echo 'What is your name ?'
+
+read -p "Enter your first name here: " firstName
+
+echo "Your first name is $firstName "
+
+
+while true; do
+
+	read -p  "Confirm by typing Y for Yes or N for No : " yn
+	case $yn in
+		[Yy]* ) echo "Hello, $firstName"; break;;
+		[Nn]* ) exit;;
+		* ) echo "Please Y or N";;
+	esac
+done
